@@ -1,0 +1,31 @@
+{
+  "name": "claude-code-starter",
+  "version": "1.0.0",
+  "description": "A minimal task-tracker CLI wired up with Claude Code skills, subagents, hooks, and GitHub Actions — built while completing Anthropic Academy's Claude Code in Action course.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lazaro Gomez Vitolo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazaro549/claude-code-starter"
+  },
+  "bin": {
+    "taskflow": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "tsx --test src/*.test.ts",
+    "lint": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
