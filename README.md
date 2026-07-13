@@ -82,7 +82,7 @@ Part of a repo-per-course series from Anthropic Academy's free tier — each cou
 
 1. Claude 101
 2. Building with the Claude API → [`claude-api-starter`](https://github.com/lazaro549/claude-api-starter)
-3. Introduction to Model Context Protocol → [`mcp-client-starter`](https://github.com/lazaro549/mcp-client-starter)
+3. Introduction to Model Context Protocol 
 4. Model Context Protocol: Advanced Topics → [`mcp-advanced-starter`](https://github.com/lazaro549/mcp-advanced-starter)
 5. **Claude Code in Action → this repo** 🎓
 
