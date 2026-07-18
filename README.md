@@ -82,11 +82,10 @@ Both workflows need an `ANTHROPIC_API_KEY` repository secret ([setup guide](http
 
 Part of a repo-per-course series from Anthropic Academy's free tier — each course gets its own starter repo instead of stopping at the certificate:
 
-1. Claude 101
+1. Claude 101(tutorial)
 2. Building with the Claude API → [`claude-api-starter`](https://github.com/lazaro549/claude-api-starter)
-3. Introduction to Model Context Protocol → [`mcp-client-starter`](https://github.com/lazaro549/mcp-client-starter)
-4. Model Context Protocol: Advanced Topics → [`mcp-advanced-starter`](https://github.com/lazaro549/mcp-advanced-starter)
-5. **Claude Code in Action → this repo** 🎓
+3. Model Context Protocol: Advanced Topics → [`mcp-advanced-starter`](https://github.com/lazaro549/mcp-advanced-starter)
+4. **Claude Code in Action → this repo** 🎓
 
 Full portfolio: [lazaro549.github.io/Portafolio](https://lazaro549.github.io/Portafolio/)
 
