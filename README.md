@@ -21,6 +21,8 @@ This is the last course in a five-part learning path — see [🌱 Learning path
 
 TaskFlow itself is deliberately tiny (`add` / `done` / `list`) — it exists mostly as something for Claude Code to operate on. The actual content of this repo is the `.claude/` configuration around it:
 
+<img src="docs/architecture.svg" alt="Claude Code reads CLAUDE.md, then fans out to Skills, Subagents, and Hooks, which all act on the TaskFlow CLI source. On push, GitHub Actions runs the same setup in CI." width="600">
+
 | Feature                                                   | Where                                     |
 | --------------------------------------------------------- | ----------------------------------------- |
 | Skills — `/review`, `/test`, `/changelog`                 | `.claude/skills/`                         |
@@ -82,7 +84,7 @@ Part of a repo-per-course series from Anthropic Academy's free tier — each cou
 
 1. Claude 101
 2. Building with the Claude API → [`claude-api-starter`](https://github.com/lazaro549/claude-api-starter)
-3. Introduction to Model Context Protocol 
+3. Introduction to Model Context Protocol → [`mcp-client-starter`](https://github.com/lazaro549/mcp-client-starter)
 4. Model Context Protocol: Advanced Topics → [`mcp-advanced-starter`](https://github.com/lazaro549/mcp-advanced-starter)
 5. **Claude Code in Action → this repo** 🎓
 

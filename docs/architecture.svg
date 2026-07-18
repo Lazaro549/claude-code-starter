@@ -1,0 +1,51 @@
+<svg width="680" height="464" viewBox="0 0 680 464" xmlns="http://www.w3.org/2000/svg" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Claude Code setup in claude-code-starter</title>
+  <desc>Flowchart: Claude Code reads CLAUDE.md, then uses three configuration surfaces — Skills, Subagents, and Hooks — which all act on the TaskFlow CLI source. On push, GitHub Actions runs the same setup in CI.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="680" height="464" fill="#FFFFFF"/>
+
+  <!-- Claude Code -->
+  <rect x="230" y="40" width="220" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#712B13">Claude Code</text>
+  <text x="340" y="76" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">reads CLAUDE.md</text>
+
+  <line x1="340" y1="96" x2="160" y2="156" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="340" y1="96" x2="340" y2="156" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="340" y1="96" x2="520" y2="156" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Skills / Subagents / Hooks -->
+  <rect x="90" y="156" width="140" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="160" y="174" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#712B13">Skills</text>
+  <text x="160" y="192" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">3 skills</text>
+
+  <rect x="260" y="156" width="160" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="340" y="174" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#712B13">Subagents</text>
+  <text x="340" y="192" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">2 agents</text>
+
+  <rect x="450" y="156" width="140" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="520" y="174" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#712B13">Hooks</text>
+  <text x="520" y="192" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">format + protect</text>
+
+  <line x1="160" y1="212" x2="340" y2="272" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="340" y1="212" x2="340" y2="272" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="520" y1="212" x2="340" y2="272" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- TaskFlow CLI -->
+  <rect x="240" y="272" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="340" y="290" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#444441">TaskFlow CLI</text>
+  <text x="340" y="308" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">src/</text>
+
+  <line x1="340" y1="328" x2="340" y2="388" stroke="#5F5E5A" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="360" y="358" dominant-baseline="central" font-size="12" fill="#5F5E5A">on push</text>
+
+  <!-- GitHub Actions -->
+  <rect x="250" y="388" width="180" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="340" y="406" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#444441">GitHub Actions</text>
+  <text x="340" y="424" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">@claude + auto-review</text>
+</svg>
