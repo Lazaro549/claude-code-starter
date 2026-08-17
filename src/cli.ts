@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import {
   addTask,
   completeTask,
@@ -8,62 +9,102 @@ import {
   type Task,
 } from "./tasks.js";
 
-function printTask(task: Task): void {
-  console.log(`${task.done ? "[x]" : "[ ]"} #${task.id}  ${task.title}`);
+export interface CliOptions {
+  tasks?: Task[];
+  stdout?: (message: string) => void;
+  stderr?: (message: string) => void;
+  persist?: boolean;
 }
 
-function main(argv: string[]): void {
+export function runCli(argv: string[], options: CliOptions = {}): number {
   const [command, ...rest] = argv;
-  const tasks = loadTasks();
+
+  const stdout = options.stdout ?? console.log;
+  const stderr = options.stderr ?? console.error;
+  const tasks = options.tasks ?? loadTasks();
+  const persist = options.persist ?? options.tasks === undefined;
+
+  const printTask = (task: Task): void => {
+    stdout(`${task.done ? "[x]" : "[ ]"} #${task.id}  ${task.title}\n`);
+  };
 
   switch (command) {
     case "add": {
       const title = rest.join(" ").trim();
+
       if (!title) {
-        console.error('Usage: taskflow add "task title"');
-        process.exitCode = 1;
-        return;
+        stderr('Usage: taskflow add "task title"\n');
+        return 1;
       }
+
       const task = addTask(title, tasks);
-      saveTasks(tasks);
-      console.log("Added:");
+
+      if (persist) {
+        saveTasks(tasks);
+      }
+
+      stdout("Added:\n");
       printTask(task);
-      break;
+      return 0;
     }
 
     case "done": {
-      const id = Number(rest[0]);
-      const task = completeTask(id, tasks);
-      if (!task) {
-        console.error(`No task with id ${rest[0]}`);
-        process.exitCode = 1;
-        return;
+      const rawId = rest[0];
+      const id = Number(rawId);
+
+      if (!rawId || !Number.isInteger(id) || id <= 0) {
+        stderr(`Invalid task id: ${rawId ?? ""}\n`);
+        return 1;
       }
-      saveTasks(tasks);
-      console.log("Completed:");
+
+      const task = completeTask(id, tasks);
+
+      if (!task) {
+        stderr(`No task with id ${rawId}\n`);
+        return 1;
+      }
+
+      if (persist) {
+        saveTasks(tasks);
+      }
+
+      stdout("Completed:\n");
       printTask(task);
-      break;
+      return 0;
     }
 
     case "list":
     case undefined: {
       const openOnly = rest.includes("--open");
       const doneOnly = rest.includes("--done");
-      const filtered = listTasks(tasks, { openOnly, doneOnly });
+
+      const filtered = listTasks(tasks, {
+        openOnly,
+        doneOnly,
+      });
+
       if (filtered.length === 0) {
-        console.log('No tasks yet. Try: taskflow add "write the README"');
+        stdout('No tasks yet. Try: taskflow add "write the README"\n');
       } else {
         filtered.forEach(printTask);
       }
-      break;
+
+      return 0;
     }
 
-    default: {
-      console.error(`Unknown command: ${command}`);
-      console.error("Usage: taskflow <add|done|list> [args]");
-      process.exitCode = 1;
-    }
+    default:
+      stderr(`Unknown command: ${command}\n`);
+      stderr("Usage: taskflow <add|done|list> [args]\n");
+      return 1;
   }
 }
 
-main(process.argv.slice(2));
+function main(): void {
+  const exitCode = runCli(process.argv.slice(2));
+
+  if (exitCode !== 0) {
+    process.exitCode = exitCode;
+  }
+}
+
+main();
