@@ -37,3 +37,4 @@
   "coverage": "tsx --test --experimental-test-coverage src/*.test.ts",
   "lint": "prettier --check ."
 }
+"coverage": "tsx --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-functions=80 --test-coverage-branches=80 --test-coverage-exclude='src/*.test.ts' src/*.test.ts"
