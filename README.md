@@ -1,10 +1,10 @@
 # 🤖 claude-code-starter
 
 [![CI](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Enabled-D97757)](https://github.com/Lazaro549/claude-code-starter)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6%2B-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Enabled-D97757)](https://github.com/Lazaro549/claude-code-starter)
 
 A minimal task-tracker CLI wired up with Claude Code's full toolkit — skills, subagents, hooks, and GitHub Actions — built while completing Anthropic Academy's **Claude Code in Action** course.
 
