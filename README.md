@@ -8,7 +8,7 @@
 
 A minimal task-tracker CLI wired up with Claude Code's full toolkit — skills, subagents, hooks, and GitHub Actions — built while completing Anthropic Academy's **Claude Code in Action** course.
 
-![License](https://img.shields.io/badge/license-MIT-blue) ![Node](https://img.shields.io/badge/node-%3E%3D18-339933) ![Built with](https://img.shields.io/badge/built%20with-Claude%20Code-D97757) 
+![License](https://img.shields.io/badge/license-MIT-blue) ![Node](https://img.shields.io/badge/node-%3E%3D18-339933) ![Built with](https://img.shields.io/badge/built%20with-Claude%20Code-D97757)
 
 ---
 

@@ -16,12 +16,12 @@
     "node": ">=18"
   },
   "scripts": {
-  "dev": "tsx src/cli.ts",
-  "build": "tsc",
-  "start": "node dist/cli.js",
-  "test": "tsx --test src/*.test.ts",
-  "coverage": "tsx --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-functions=80 --test-coverage-branches=80 --test-coverage-exclude='src/*.test.ts' src/*.test.ts",
-  "lint": "prettier --check ."
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "tsx --test src/*.test.ts",
+    "coverage": "tsx --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-functions=80 --test-coverage-branches=80 --test-coverage-exclude='src/*.test.ts' src/*.test.ts",
+    "lint": "prettier --check ."
   },
   "devDependencies": {
     "@types/node": "^22.7.0",
@@ -30,6 +30,3 @@
     "typescript": "^5.6.0"
   }
 }
-
-
-
