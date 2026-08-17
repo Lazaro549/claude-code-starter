@@ -1,5 +1,6 @@
 # 🤖 claude-code-starter
 [![CI](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/Lazaro549/claude-code-starter/graph/badge.svg)](https://codecov.io/gh/Lazaro549/claude-code-starter)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6%2B-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
