@@ -1,4 +1,5 @@
 # 🤖 claude-code-starter
+
 [![CI](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/Lazaro549/claude-code-starter/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/Lazaro549/claude-code-starter/graph/badge.svg)](https://codecov.io/gh/Lazaro549/claude-code-starter)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)

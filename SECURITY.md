@@ -6,8 +6,8 @@ Security updates are provided for the latest release of this project.
 
 | Version | Supported |
 | ------- | --------- |
-| 1.x     | ✅ Yes     |
-| < 1.0   | ❌ No      |
+| 1.x     | ✅ Yes    |
+| < 1.0   | ❌ No     |
 
 ## Reporting a Vulnerability
 
